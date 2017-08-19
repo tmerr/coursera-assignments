@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+}
+
+h1 {
+    font-size: 1.75em;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.menu-item > h2 {
+    font-size: 1.25em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 0.15em;
+    width: 7em;
+    height: 1.5em;
+    text-align: center;
+
+    /* create border and compensate for overlap */
+    border: 1px solid black;
+    margin-top: -1px;
+    margin-right: -1px;
+}
+
+.menu-item:nth-child(1) > h2 {
+    background-color: pink;
+}
+
+.menu-item:nth-child(2) > h2 {
+    background-color: red;
+    color: white;
+}
+
+.menu-item:nth-child(3) > h2 {
+    background-color: yellow;
+}
+
+.menu-item > div {
+    margin-top: 2em;
+}
+
+.menu-container {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.menu-item {
+    position: relative;
+    float: left;
+    background-color: #AAA;
+    padding: 1%;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+@media (min-width: 992px) {
+    /*
+     * 1% + 2*1% + 2*1% + 1% = 6% of menu-container space occupied by margins.
+     * so each menu item should take (100% - 6%)/3 space, that is 31.33...%.
+     */
+    .menu-item {
+        margin: 1%;
+        width: 31.33%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /*
+     * two columns means
+     * (100% - 4%)/2 = 48%
+     *
+     * one column means
+     * (100% - 2%) = 98%
+     */
+    .menu-item {
+        margin: 1%;
+        width: 48%;
+    }
+
+    .menu-item:nth-child(3) {
+        width: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu-item {
+        width: auto;
+        margin: 2%;
+    }
+
+    .menu-container {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+}
