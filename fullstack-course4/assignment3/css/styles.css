@@ -1,0 +1,30 @@
+#collapsable-nav {
+  background-color: #333;
+}
+
+.menu-item-inner {
+  background-color: #DDD;
+  padding: 1em;
+}
+
+@media (min-width: 767px) {
+  .menu-item {
+    padding: 1%;
+  }
+  #menu-container {
+    padding: 0 1% 0 1%;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-item {
+    padding: 2%;
+  }
+  #menu-container {
+    padding: 0 8% 0 8%;
+  }
+}
+
+h3 {
+  margin-top: 10px;
+}
