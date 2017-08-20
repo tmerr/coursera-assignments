@@ -2,6 +2,10 @@
   background-color: #333;
 }
 
+#collapsable-nav a:hover {
+  background-color: #444;
+}
+
 .menu-item-inner {
   background-color: #DDD;
   padding: 1em;
